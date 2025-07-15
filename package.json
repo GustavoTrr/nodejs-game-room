@@ -1,0 +1,31 @@
+{
+  "name": "game-room-api",
+  "version": "1.0.0",
+  "description": "It's an API form game room",
+  "keywords": [
+    "game",
+    "room"
+  ],
+  "homepage": "https://github.com/GustavoTrr/nodejs-game-room#readme",
+  "bugs": {
+    "url": "https://github.com/GustavoTrr/nodejs-game-room/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoTrr/nodejs-game-room.git"
+  },
+  "license": "MIT",
+  "author": "Gustavo Torres",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
