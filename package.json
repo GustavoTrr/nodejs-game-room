@@ -1,6 +1,6 @@
 {
   "name": "game-room-api",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.1",
   "description": "It's an API form game room",
   "keywords": [
     "game",
