@@ -5,7 +5,7 @@ import {
     joinRoom,
     listPlayers,
     deleteRoom
-} from '../controllers/roomController.js'
+} from '../controllers/roomController'
 
 const router = Router()
 router.get('/', listRooms)

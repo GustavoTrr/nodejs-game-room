@@ -1,7 +1,7 @@
 {
-  "watch": ["src", "server.js"],
-  "ext": "js,json",
+  "watch": ["src"],
+  "ext": "ts",
   "ignore": ["node_modules"],
-  "exec": "node server.js",
+  "exec": "ts-node src/server.ts",
   "legacyWatch": true
 }
