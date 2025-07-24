@@ -1,0 +1,13 @@
+
+services:
+  game-room-api:
+    container_name: game-room-api
+    build:
+      dockerfile: ./Dockerfile.dev
+      context: .
+    volumes:
+      - .:/app
+      - /app/node_modules  # Avoid conflicts between host and container
+    ports:
+      - 3000:3000
+    command: npm run dev
