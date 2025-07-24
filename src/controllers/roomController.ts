@@ -2,12 +2,12 @@ import { Request, Response } from 'express';
 import * as roomService from '../services/roomService';
 import { Room } from 'src/types/room';
 
-export function listRooms(req: Request, res: Response): Response<Room[]> {
+export function listRooms(_req: Request, res: Response): Response<Room[]> {
   const rooms = roomService.listRooms();
   return res.json(rooms);
 }
 
-export function createRoom(req: Request, res: Response): Response<Room> {
+export function createRoom(_req: Request, res: Response): Response<Room> {
   const room = roomService.createRoom();
   return res.status(201).json(room);
 }

@@ -1,10 +1,10 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express, { Request, Response } from 'express';
 import roomRoutes from './routes/roomRoutes';
 
 const app = express();
 app.use(express.json());
 
-app.get('/', (req: Request, res: Response) => {
+app.get('/', (_req: Request, res: Response) => {
   res.send('Game Room API is running! ✅')
 })
 
