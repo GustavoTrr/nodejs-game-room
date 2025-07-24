@@ -3,7 +3,7 @@ services:
   game-room-api:
     container_name: game-room-api
     build:
-      dockerfile: ./Dockerfile
+      dockerfile: ./Dockerfile.dev
       context: .
     volumes:
       - .:/app

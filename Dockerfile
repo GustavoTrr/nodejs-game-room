@@ -1,19 +1,30 @@
-FROM node:alpine
+FROM node:24.4-alpine AS builder
 
-# Cria diretório da aplicação
 WORKDIR /app
 
-# Copia os arquivos de dependências
 COPY package*.json ./
 
-# Instala dependências
-RUN npm install
+RUN npm ci
 
-# Copia o restante do código
 COPY . .
 
-# Expõe a porta
+RUN npm run build
+
+########################
+####  Second Stage  ####
+########################
+
+FROM node:24.4-alpine AS production
+
+WORKDIR /app
+
+ENV NODE_ENV=production
+
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/node_modules ./node_modules
+
+COPY package*.json ./
+
 EXPOSE 3000
 
-# Comando default (sobrescrito no docker-compose)
-CMD ["npm", "run", "dev"]
+CMD ["node", "dist/server.js"]
