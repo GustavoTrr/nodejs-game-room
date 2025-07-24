@@ -1,7 +1,7 @@
 {
   "name": "game-room-api",
   "version": "1.0.0-beta.1",
-  "description": "It's an API form game room",
+  "description": "It's an API for a game room",
   "keywords": [
     "game",
     "room"
@@ -17,10 +17,16 @@
   "license": "MIT",
   "author": "Gustavo Torres",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "build": "tsc -p tsconfig.prod.json",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "dependencies": {
     "express": "^5.1.0"
