@@ -11,16 +11,20 @@ The main goal here is to bring a study case of how to build an backend applicati
 game-room-api/
 ├── src/
 │   ├── routes/
-│   │   └── roomRoutes.js
+│   │   └── roomRoutes.ts
 │   ├── controllers/
-│   │   └── roomController.js
+│   │   └── roomController.ts
 │   ├── services/
-│   │   └── roomService.js
-│   └── app.js
-├── .env
+│   │   └── roomService.ts
+│   ├── types/
+│   │   └── room.ts
+│   └── app.ts
+│   └── server.ts
 ├── package.json
 ├── README.md
-└── server.js
+├── TODO.md
+├── Dockerfile
+└── docker-compose.yml
 
 ## Development:
 
@@ -32,6 +36,9 @@ game-room-api/
 - Clone the project (```git clone ....```)
 - Enter the project's directory (```cd ....```)
 - run the app with docker compose (```docker compose up -d```)
+* The API should now be running on http://localhost:3000/
 
 ### Tips:
-- Use git flow
+- Use Git Flow for better team collaboration and release management.
+- Check the TODO.md file for future enhancements and roadmap ideas.
+- Contributions are welcome!
